@@ -1,15 +1,542 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New Year Block</title>
+    <link rel="stylesheet" href="./styles/critical.css">
+    <link rel="stylesheet" href="./styles/style.css">
+
+    <link rel="stylesheet" href="./fancy/jquery.fancybox.min.css">
 </head>
 
 <body>
+    <div id="new-year">
+        <div class="content-container">
+            <p class="title">Закажите трубогиб Гиббон <span class="red">сейчас!</span></p>
+            <p class="subtitle"><span class="red">Не ждите</span> до последнего</p>
+            <div class="new-year columns">
+                <div class="timer-container">
+                    <p class="timer-title red">
+                        <i class="fa fa-snowflake-o" aria-hidden="true"></i>
+                        До Нового года осталось:
+                    </p>
+                    <div class="timer">
+                        <span class="num days">365</span>
+                        <span class="num-separator">:</span>
+                        <span class="num hours">24</span>
+                        <span class="num-separator">:</span>
+                        <span class="num minutes">59</span>
+                        <span class="num-separator">:</span>
+                        <span class="num seconds">00</span>
+                    </div>
+                </div>
+                <div class="text">
+                    <ul>
+                        <li>Перед праздниками курьерские и транспортные службы завалены заказами.</li>
+                        <li>Досадные задержки, очереди на почте и в пунктах выдачи…</li>
+                        <li>Из-за всеобщих авралов сроки доставки срываются, посылки "зависают".</li>
+                    </ul>
+                    <p class="block-title red">Вывод:</p>
+                    <p>Позаботьтесь о покупках заранее!</p>
+                    <div class="button-container">
+                        <a href="#order-modal" class="button fancybox" data-dop="">Заказать</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="order-model" class="form-popup">
+        <div class="form-container">
+            <div class="form-title">
+                <p class="offer">Заказать трубогиб
+                    <span class="model-name " data-model="Гиббон Про">Гиббон Про</span>
+                    <span class="red">с выгодой <span class="discount">55</span>%</span> за
+                    <span class="new-price nowrap"><span>9 990</span> руб.</span>
+                </p>
+            </div>
+            <div class="columns">
+                <div class="img-container">
+                    <img src="images/gibbon-pro-new.png" alt="" />
+                </div>
+                <div class="form-body">
+                    <form method="post" class="order-form">
+                        <input type="hidden" name="url" value="https://trubogib-gibbon.ru/">
+                        <input type="hidden" class="model" value="gibbon_pro" data-id="tdehLskNh4KXn1Fj0iJcu0">
+                        <input type="hidden" class="comment" value="">
+                        <div class="hide">
+                            <label><input type="text" name="firstname_lastname" placeholder="имя фамилия"></label>
+                        </div>
+                        <label class="custom-data custom-name">
+                            <input type="text" name="name" placeholder="Ваше имя" autocomplete="off">
+                            <span></span>
+                        </label>
+                        <label class="custom-data custom-phone">
+                            <input type="text" name="phone" placeholder="Ваш телефон" autocomplete="off">
+                            <span></span>
+                        </label>
+                        <label class="custom-checkbox no-lite">
+                            <input class="custom-checkbox_input" type="checkbox" autocomplete="off"
+                                data-dop="centroboy">
+                            <span class="custom-checkbox_check">+ центробой</span>
+                        </label>
+                        <label class="custom-checkbox no-lite">
+                            <input class="custom-checkbox_input" type="checkbox" autocomplete="off" data-dop="adapter">
+                            <span class="custom-checkbox_check">+ адаптер для дрели</span>
+                        </label>
+                        <label class="custom-checkbox">
+                            <input class="custom-checkbox_input" type="checkbox" autocomplete="off" data-dop="ugol">
+                            <span class="custom-checkbox_check">+ магнитный угол для сварки</span>
+                        </label>
+                        <!--<label class="custom-checkbox">
+                            <input class="custom-checkbox_input" type="checkbox" autocomplete="off" data-dop="roliki">
+                            <span class="custom-checkbox_check">+ набор роликов для труб</span>
+                        </label>
+                        <label class="custom-checkbox">
+                            <input class="custom-checkbox_input" type="checkbox" autocomplete="off" data-dop="ulitka">
+                            <span class="custom-checkbox_check">+ станок Улитка</span>
+                        </label>
+                        <label class="custom-checkbox">
+                            <input class="custom-checkbox_input" type="checkbox" autocomplete="off" data-dop="nabor_parnik">
+                            <span class="custom-checkbox_check">+ набор крепежей "Парник"</span>
+                        </label>-->
+                        <label class="custom-checkbox">
+                            <input class="custom-checkbox_input" type="checkbox" autocomplete="off" data-dop="kolca">
+                            <span class="custom-checkbox_check">+ набор стопорных колец</span>
+                        </label>
+                        <input type="submit" value="Заказать" class="button">
+                        <p class="info">Мы свяжемся с Вами в течение <span class="nowrap">5 минут</span> и уточним
+                            детали
+                            доставки</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <div id="order-modal" class="form-popup">
+        <div class="form-container">
+            <div class="form-title">
+                <p class="offer">Заказать трубогиб
+                    <span class="model-name " data-model="Гиббон Про">Гиббон Про</span>
+                    <span class="red">с выгодой <span class="discount">55</span>%</span> за
+                    <span class="new-price nowrap"><span>9 990</span> руб.</span>
+                </p>
+            </div>
+            <div class="columns">
+                <div class="img-container">
+                    <img src="images/gibbon-pro-new.png" alt="" />
+                </div>
+                <div class="form-body">
+                    <form method="post" class="order-form">
+                        <input type="hidden" name="url" value="https://trubogib-gibbon.ru/">
+                        <input type="hidden" class="model" value="gibbon_pro" data-id="tdehLskNh4KXn1Fj0iJcu0">
+                        <input type="hidden" class="comment" value="">
+
+                        <select class="custom-list">
+                            <option value="gibbon_econom">Трубогиб Гиббон Эконом</option>
+                            <option value="gibbon">Трубогиб Гиббон</option>
+                            <option value="gibbon_pro" selected>Трубогиб Гиббон Про</option>
+                        </select>
+                        <div class="hide">
+                            <label><input type="text" name="firstname_lastname" placeholder="имя фамилия"></label>
+                        </div>
+                        <label class="custom-data custom-name">
+                            <input type="text" name="name" placeholder="Ваше имя" autocomplete="off">
+                            <span></span>
+                        </label>
+                        <label class="custom-data custom-phone">
+                            <input type="text" name="phone" placeholder="Ваш телефон" autocomplete="off">
+                            <span></span>
+                        </label>
+                        <label class="custom-checkbox no-lite">
+                            <input class="custom-checkbox_input" type="checkbox" autocomplete="off"
+                                data-dop="centroboy">
+                            <span class="custom-checkbox_check">+ центробой</span>
+                        </label>
+                        <label class="custom-checkbox no-lite">
+                            <input class="custom-checkbox_input" type="checkbox" autocomplete="off" data-dop="adapter">
+                            <span class="custom-checkbox_check">+ адаптер для дрели</span>
+                        </label>
+                        <label class="custom-checkbox">
+                            <input class="custom-checkbox_input" type="checkbox" autocomplete="off" data-dop="ugol">
+                            <span class="custom-checkbox_check">+ магнитный угол для сварки</span>
+                        </label>
+                        <!--<label class="custom-checkbox">
+                            <input class="custom-checkbox_input" type="checkbox" autocomplete="off" data-dop="roliki">
+                            <span class="custom-checkbox_check">+ набор роликов для труб</span>
+                        </label>-->
+                        <label class="custom-checkbox dop-ulitka hidden">
+                            <input class="custom-checkbox_input" type="checkbox" autocomplete="off" data-dop="ulitka">
+                            <span class="custom-checkbox_check">+ станок Улитка</span>
+                        </label>
+                        <!--<label class="custom-checkbox">
+                            <input class="custom-checkbox_input" type="checkbox" autocomplete="off" data-dop="nabor_parnik">
+                            <span class="custom-checkbox_check">+ набор крепежей "Парник"</span>
+                        </label>-->
+                        <label class="custom-checkbox">
+                            <input class="custom-checkbox_input" type="checkbox" autocomplete="off" data-dop="kolca">
+                            <span class="custom-checkbox_check">+ набор стопорных колец</span>
+                        </label>
+                        <input type="submit" value="Заказать" class="button">
+                        <p class="info">Мы свяжемся с Вами в течение <span class="nowrap">5 минут</span> и уточним
+                            детали
+                            доставки</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="oplata-modal" class="form-popup">
+        <div class="form-container">
+            <div class="form-title">
+                <p class="offer">Заказать трубогиб
+                    <span class="model-name " data-model="Гиббон Про">Гиббон Про</span>
+                    <span class="red">с выгодой <span class="discount">55</span>%</span> за
+                    <span class="new-price nowrap"><span>9 990</span> руб.</span>
+                </p>
+            </div>
+            <div class="columns">
+                <div class="img-container">
+                    <img src="images/gibbon-pro-new.png" alt="" />
+                </div>
+                <div class="form-body">
+                    <form method="post" class="order-form online-payment">
+                        <input type="hidden" name="url" value="https://trubogib-gibbon.ru/">
+                        <input type="hidden" class="model" value="gibbon_pro" data-id="tdehLskNh4KXn1Fj0iJcu0">
+                        <input type="hidden" name="prepayment" value="1">
+                        <input type="hidden" class="comment" value="">
+
+                        <select class="custom-list">
+                            <option value="gibbon" selected>Трубогиб Гиббон</option>
+                            <option value="gibbon_pro">Трубогиб Гиббон Про</option>
+                        </select>
+                        <div class="hide">
+                            <label><input type="text" name="firstname_lastname" placeholder="имя фамилия"></label>
+                        </div>
+                        <label class="custom-data custom-name">
+                            <input type="text" name="name" placeholder="Ваше имя" autocomplete="off">
+                            <span></span>
+                        </label>
+                        <label class="custom-data custom-phone">
+                            <input type="text" name="phone" placeholder="Ваш телефон" autocomplete="off">
+                            <span></span>
+                        </label>
+                        <label class="custom-data custom-address">
+                            <input type="text" name="address" placeholder="Адрес доставки *" autocomplete="off">
+                            <span></span>
+                            <p class="info info-label"><sup>*</sup> заполните или сообщите оператору</p>
+                        </label>
+                        <label class="custom-checkbox no-lite hidden">
+                            <input class="custom-checkbox_input" type="checkbox" autocomplete="off"
+                                data-dop="centroboy">
+                            <span class="custom-checkbox_check">+ центробой</span>
+                        </label>
+                        <label class="custom-checkbox no-lite hidden">
+                            <input class="custom-checkbox_input" type="checkbox" autocomplete="off" data-dop="adapter">
+                            <span class="custom-checkbox_check">+ адаптер для дрели</span>
+                        </label>
+                        <label class="custom-checkbox hidden">
+                            <input class="custom-checkbox_input" type="checkbox" autocomplete="off" data-dop="ugol">
+                            <span class="custom-checkbox_check">+ магнитный угол для сварки</span>
+                        </label>
+                        <label class="custom-checkbox hidden">
+                            <input class="custom-checkbox_input" type="checkbox" autocomplete="off" data-dop="roliki">
+                            <span class="custom-checkbox_check">+ набор роликов для труб</span>
+                        </label>
+                        <label class="custom-checkbox dop-ulitka hidden">
+                            <input class="custom-checkbox_input" type="checkbox" autocomplete="off" data-dop="ulitka">
+                            <span class="custom-checkbox_check">+ станок Улитка</span>
+                        </label>
+                        <label class="custom-checkbox hidden">
+                            <input class="custom-checkbox_input" type="checkbox" autocomplete="off" data-dop="kolca">
+                            <span class="custom-checkbox_check">+ набор стопорных колец</span>
+                        </label>
+                        <input type="submit" value="Заказать" class="button">
+                        <p class="info">Мы свяжемся с Вами в течение <span class="nowrap">5 минут</span> и уточним
+                            детали
+                            доставки</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="order-cheap" class="form-popup">
+        <div class="form-container">
+            <div class="form-title">
+                <p class="offer">Заказать трубогиб
+                    <span class="model-name">Гиббон Эконом</span>
+                    <span class="red">с выгодой <span class="discount">30</span>%</span> за
+                    <span class="new-price nowrap"><span>8 490</span> руб.</span>
+                </p>
+            </div>
+            <div class="columns">
+                <div class="img-container">
+                    <img src="images/gibbon-econom.png" alt="" />
+                </div>
+                <div class="form-body">
+                    <form method="post" class="order-form">
+                        <input type="hidden" name="url" value="https://trubogib-gibbon.ru/">
+                        <input type="hidden" class="model" value="gibbon_econom" data-id="6hsdj3sH3">
+                        <input type="hidden" class="comment" value="">
+
+                        <select class="custom-list">
+                            <option value="gibbon_econom" selected>Трубогиб Гиббон Эконом</option>
+                            <option value="gibbon">Трубогиб Гиббон</option>
+                            <option value="gibbon_pro">Трубогиб Гиббон Про</option>
+                        </select>
+                        <div class="hide">
+                            <label><input type="text" name="firstname_lastname" placeholder="имя фамилия"></label>
+                        </div>
+                        <label class="custom-data custom-name">
+                            <input type="text" name="name" placeholder="Ваше имя" autocomplete="off">
+                            <span></span>
+                        </label>
+                        <label class="custom-data custom-phone">
+                            <input type="text" name="phone" placeholder="Ваш телефон" autocomplete="off">
+                            <span></span>
+                        </label>
+                        <label class="custom-checkbox no-lite">
+                            <input class="custom-checkbox_input" type="checkbox" autocomplete="off"
+                                data-dop="centroboy">
+                            <span class="custom-checkbox_check">+ центробой</span>
+                        </label>
+                        <label class="custom-checkbox no-lite">
+                            <input class="custom-checkbox_input" type="checkbox" autocomplete="off" data-dop="adapter">
+                            <span class="custom-checkbox_check">+ адаптер для дрели</span>
+                        </label>
+                        <label class="custom-checkbox">
+                            <input class="custom-checkbox_input" type="checkbox" autocomplete="off" data-dop="ugol">
+                            <span class="custom-checkbox_check">+ магнитный угол для сварки</span>
+                        </label>
+                        <!--<label class="custom-checkbox">
+                            <input class="custom-checkbox_input" type="checkbox" autocomplete="off" data-dop="roliki">
+                            <span class="custom-checkbox_check">+ набор роликов для труб</span>
+                        </label>
+                        <label class="custom-checkbox">
+                            <input class="custom-checkbox_input" type="checkbox" autocomplete="off" data-dop="ulitka">
+                            <span class="custom-checkbox_check">+ станок Улитка</span>
+                        </label>
+                        <label class="custom-checkbox">
+                            <input class="custom-checkbox_input" type="checkbox" autocomplete="off" data-dop="nabor_parnik">
+                            <span class="custom-checkbox_check">+ набор крепежей "Парник"</span>
+                        </label>-->
+                        <label class="custom-checkbox">
+                            <input class="custom-checkbox_input" type="checkbox" autocomplete="off" data-dop="kolca">
+                            <span class="custom-checkbox_check">+ набор стопорных колец</span>
+                        </label>
+                        <input type="submit" value="Заказать" class="button">
+                        <p class="info">Мы свяжемся с Вами в течение <span class="nowrap">5 минут</span> и уточним
+                            детали
+                            доставки</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="quick-order" class="form-popup">
+        <div class="form-container">
+            <div class="form-title">
+                <p class="offer">Оформить заказ</p>
+            </div>
+            <div class="form-body">
+                <form method="post" class="order-form">
+                    <input type="hidden" name="url" value="https://trubogib-gibbon.ru/">
+                    <input type="hidden" class="model" value="gibbon_pro" data-id="tdehLskNh4KXn1Fj0iJcu0">
+                    <input class="custom-checkbox_input hidden" type="checkbox" data-dop="centroboy">
+                    <input class="custom-checkbox_input hidden" type="checkbox" data-dop="adapter">
+                    <input class="custom-checkbox_input hidden" type="checkbox" data-dop="ugol">
+                    <input class="custom-checkbox_input hidden" type="checkbox" data-dop="nabor_parnik">
+                    <input class="custom-checkbox_input hidden" type="checkbox" data-dop="roliki">
+                    <input class="custom-checkbox_input hidden" type="checkbox" data-dop="kolca">
+                    <div class="hide">
+                        <label><input type="text" name="firstname_lastname" placeholder="имя фамилия"></label>
+                    </div>
+                    <label class="custom-data custom-name">
+                        <input type="text" name="name" placeholder="Ваше имя" autocomplete="off">
+                        <span></span>
+                    </label>
+                    <label class="custom-data custom-phone">
+                        <input type="text" name="phone" placeholder="Ваш телефон" autocomplete="off">
+                        <span></span>
+                    </label>
+                    <input type="submit" value="Отправить" class="button">
+                    <p class="info">Мы свяжемся с Вами в течение 5 минут и уточним детали доставки</p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="message" class="form-popup">
+        <div class="form-container">
+            <div class="form-title">
+                <p class="offer"></p>
+            </div>
+            <div class="form-body">
+                <p class="message-text"></p>
+            </div>
+        </div>
+    </div>
+
+    <div id="verify-phone" class="form-popup">
+        <div class="form-container">
+            <div class="form-title">
+                <p class="offer">Спасибо, ваша заявка принята!</p>
+            </div>
+            <div class="form-body">
+                <p class="message-text">Проверьте свой номер - вдруг вы ошиблись?</p>
+                <form method="post" class="check-form">
+                    <input type="hidden" name="name" placeholder="Ваше имя" autocomplete="off">
+                    <label class="custom-data custom-phone">
+                        <input type="text" name="phone" placeholder="Ваш телефон" autocomplete="off">
+                        <span></span>
+                    </label>
+                    <input type="submit" value="Все верно" class="button">
+                </form>
+                <p class="info"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/jquery.js"></script>
+    <script src="fancy/jquery.fancybox.min.js"></script>
+    <script src="scripts/slick-slider.min.js"></script>
+    <script src="scripts/jquery.maskedinput.min.js"></script>
+    <script src="scripts/lazyload.min.js"></script>
+    <script src="scripts/goods.js"></script>
+    <script src="scripts/custom.js"></script>
+    <script src="scripts/send-order.js?v=2"></script>
+
+    <script>
+        $(document).ready(function () {
+            var today, month, day_now, hours, minutes;
+
+            today = new Date();
+            month = today.getMonth();
+            day_now = today.getDate();
+            hours = today.getHours();
+            minutes = today.getMinutes();
+
+            if ((month == 11 && day_now == 31 && (hours > 18 || (hours == 17 && minutes >= 30))) || (month == 0 && day_now < 3)) {
+
+                $.message = "Сейчас праздники, и до 3 января мы отдыхаем. Приносим извинения за возможные неудобства.<br /> Мы обязательно свяжемся с вами в понедельник, 3 января 2022 г. <br /><br /> С Новым годом!";
+
+            } else {
+
+                if (hours > 18 || (hours == 17 && minutes >= 40) || hours < 9 || (hours == 8 && minutes <= 50)) {
+                    $.message = "С 9 часов по московскому времени с Вами свяжется оператор!";
+                } else {
+                    $.message = "Мы перезвоним Вам в течение 10 минут";
+                }
+            }
+
+            $('.order-form').submit(function (e) {
+
+                validate($(this));
+
+                if ($.errors == false) {
+                    send_order($(this));
+                    e.preventDefault();
+                } else {
+                    e.preventDefault();
+                }
+            });
+
+            $('.check-form').submit(function (e) {
+                validate($(this));
+                e.preventDefault();
+                if ($.errors == false) {
+                    $this = $(this);
+                    var $verifyPhone = $('#verify-phone')
+                    var order_id = $verifyPhone.data('order-id');
+                    var redirectUrl = $verifyPhone.data('redirect-url');
+                    var noRedirect = parseInt($verifyPhone.data('no-redirect'));
+                    $.ajax({
+                        url: '/request/order/edit',
+                        type: 'post',
+                        data: $this.serialize() + `&order_id=${order_id}`,
+                        success: function (data) {
+                            if (data.success) {
+                                if (data.redirect === true && noRedirect !== 1) {
+                                    location.href = redirectUrl;
+                                } else {
+                                    $this.trigger('reset');
+                                    $('#message .offer').text('Спасибо, ваша заявка принята!');
+                                    $('#message .message-text').html($.message);
+                                }
+                            } else {
+                                $('#message .offer').text('Ошибка!');
+                                $('#message .message-text').html('К сожалению, не удалось изменить номер.');
+                            }
+                            if (data.redirect !== true || noRedirect === 1) {
+                                $.fancybox.close();
+                                if (!noRedirect) {
+                                    $.fancybox.open($('#message'));
+                                }
+                            }
+                        }
+                    });
+                } else {
+                    e.preventDefault();
+                }
+            });
+        });
+    </script>
+
+    <script type="application/ld+json">
+            {
+                "@context": "http://schema.org",
+                "@type": "Product",
+                "image": "https://trubogib-gibbon.ru/images/header-roliki.png",
+                "name": "Ручной трубогиб Гиббон",
+                "description": "Трубогибы Гиббон. Купить по цене завода-производителя. Гнут все популярные ГОСТовские профили от 10х10 до 60х40. Ровные дуги с первого раза - линейка повторяемости. Закрытые подшипники, усиленный ходовой винт, валы из закаленной стали. Цена от 8490.00 руб.",
+                "logo": "https://trubogib-gibbon.ru/images/logo.png",
+                "brand": "трубогиб Гиббон",
+                "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "bestRating": "5",
+                    "ratingCount": "6",
+                    "ratingValue": "5"
+                },
+                "offers": {
+                    "@type": "AggregateOffer",
+                    "priceCurrency": "RUB",
+                    "highPrice": "9990.00",
+                    "lowPrice": "8490.00",
+                    "offerCount": "3",
+                    "offers": [{
+                            "@type": "Offer",
+                            "name": "трубогиб Гиббон Эконом",
+                            "description": "Трубогиб Гиббон Эконом. Купить за 8 490 руб. от производителя. Каленые валы, линейка повторяемости, 7 подшипников. Прокат профилей без усилий.",
+                            "image": "https://trubogib-gibbon.ru/images/gibbon-econom.png",
+                            "price": "8490.00",
+                            "availability": "http://schema.org/InStock"
+                        },
+                        {
+                            "@type": "Offer",
+                            "name": "трубогиб Гиббон",
+                            "description": "Ручной профилегиб Гиббон с цепью. Цена - 8 490 руб. Для профилей от 10х10 до 60х40. Цепной привод - прокат дуг без усилий. Каленые валы, линейка повторяемости, закаленный ходовой винт.",
+                            "image": "https://trubogib-gibbon.ru/images/gibbon-new.png",
+                            "price": "9490.00",
+                            "availability": "http://schema.org/InStock"
+                        },
+                        {
+                            "@type": "Offer",
+                            "name": "трубогиб Гиббон Про",
+                            "description": "Цепной профилегиб Гиббон. Модель для профи: 16 подшипников, прорезиненная ручка. Цена - 8 490 руб. Для профилей от 10х10 до 60х40. Цепной привод, каленые валы, линейка повторяемости, закаленный ходовой винт.",
+                            "image": "https://trubogib-gibbon.ru/images/gibbon-pro-new.png",
+                            "price": "9990.00",
+                            "availability": "http://schema.org/InStock"
+                        }
+                    ]
+                }
+            }
+        </script>
 </body>
 
 </html>
